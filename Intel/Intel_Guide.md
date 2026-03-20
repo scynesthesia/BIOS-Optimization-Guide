@@ -231,7 +231,7 @@ If you don't play any of those games you can disable them all
 * **USB transfer/Device reset Time-outs – Lower Values** (Reduces peripheral initialization delays to speed up the POST process)  
 * **Enable Hibernation – Disabled** (Disables firmware-level hibernation support for a cleaner boot process, may disable jack audio, test) 
 
-### **Dynamic Frequency & Boost Control (Intel)**
+## **Dynamic Frequency & Boost Control (Intel)**
 
 1. **Dynamic Path (Non-K CPUs or "I don't have time to OC"):** Set everything to **\[Enabled\] / \[Max\]** to force the highest possible boost clocks.  
 2. **Static Path (K/KF CPUs with Manual OC):** Set everything to **\[Disabled\]** to ensure 100% determinism and prevent the BIOS from interfering with your fixed frequency.
