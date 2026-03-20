@@ -98,7 +98,6 @@ If you don't play any of those games you can disable them all
 * **Energy Efficient Turbo** – **Disabled** (Eliminates frequency oscillations during gaming).  
 * **Intel Dynamic Tuning Technology (DTT)** – **Disabled** (Prevents Windows from overriding power limits based on OEM thermal profiles).  
 * **Acoustic Noise Mitigation** – **Disabled** (Ensures stable VRM switching frequency; avoids signal noise).  
-* **Enhanced Intel SpeedStep (EIST) – Disabled** (Eliminates transition latency between voltages and frequencies; essential for flat frame pacing).  
 * **PPCC / PDRT / ARTG / PMAX Object – Disabled** (Disables ACPI power objects to prevent OS-level software throttling and ensure BIOS control)  
 * **Disable Fast PKG C State Ramp – Enabled** (Prevents rapid VRM phase transitions during power-state changes to improve voltage stability on dynamic loads)  
 * **Tcc Activation Offset – 0** (Ensures the CPU does not throttle before reaching its maximum allowed temperature)
@@ -193,7 +192,7 @@ If you don't play any of those games you can disable them all
 
 ## **PEP (Power Engine Plugin)** 
 
-*Controls subsystem-level deep sleep. Disabling prevents PEP-managed idle states and reduces transition jitter.*
+*PEP coordinates sleep states across all subsystems — disable everything here unless on a laptop.*
 
 * **All PEP \- CPU / Graphics / IPU / GNA** – **Disabled** (Prevents power state coordination for core, integrated graphics, image processing, and the Neural Network Accelerator).
 
@@ -224,7 +223,7 @@ If you don't play any of those games you can disable them all
 * **Fast Boot – Disabled** (Ensure this is disabled in BIOS to allow a full hardware initialization, which often results in more stable PCIe/USB training).  
 * **HPET – Enabled** (Enables the High Precision Event Timer; can change timer behavior and input timing. Test per system.)  
 * **BIST (Built-In Self Test) – Disabled** (Skips power-on self-tests to ensure a consistent initial hardware state and faster POST)  
-* **Three Strike Counter – Disabled** (Desactiva el mecanismo de seguridad que resetea la BIOS automáticamente tras tres intentos fallidos de booteo).  
+* **Three Strike Counter – Disabled** (Disables the security mechanism that automatically resets the BIOS after three failed boot attempts).  
 * **GNA Device – Disabled** (Disables the Gaussian Neural Accelerator; removes background AI processing cycles ).  
 * **IPU Device – Disabled** (Disables the Image Processing Unit if not using a webcam; reduces SoC overhead ).  
 * **Sensor Standby – Disabled** (Prevents motherboard sensors from entering standby to avoid polling delays ).  
@@ -255,6 +254,7 @@ If you don't play any of those games you can disable them all
 
 * **MultiCore Enhancement (MCE)** – **\[Remove All Limits\]** for Dynamic / **\[Disabled\]** for Static.  
 * **Adaptive Boost Tech (ABT)** – **\[Enabled\]** for Dynamic / **\[Disabled\]** for Static.
+**Enhanced Intel SpeedStep (EIST)** – **\[Enabled]** for Dynamic / **\[Disabled]** for Static
 
 # **High Risk 🔴**
 
